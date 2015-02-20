@@ -1,1 +1,1 @@
-app.gameBoard();
+app.tileTemplate(9);

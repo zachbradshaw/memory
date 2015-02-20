@@ -35,153 +35,22 @@
 
       </div>
       <br />
-      <div class="game-board">
+      <div class="main-content"></div>
 
-        <label class="game-board__square">
-          <input type="checkbox">
-          <div class="game-board__cover">
-            <span class="game-icons">a</span>
-          </div>
+      <script type="text/html" id="gameBoard">
 
-        </label>
-        <label class="game-board__square">
+        <div class="game-board">
+          <% m.cards.forEach(function (card) { %>
+            <label class="game-board__square">
+              <input type="checkbox">
+              <div class="game-board__cover">
+                <span class="game-icons"><%- card %></span>
+              </div>
+            </label>
+          <% }) %>
+        </div>
 
-          <input type="checkbox">
-          <span class="game-board__cover">
-            <span class="game-icons">b</span>
-          </span>
-
-        </label>
-        <label class="game-board__square">
-
-          <input type="checkbox">
-          <span class="game-board__cover">
-            <span class="game-icons">c</span>
-          </span>
-
-        </label>
-        <label class="game-board__square">
-
-          <input type="checkbox">
-          <span class="game-board__cover">
-            <span class="game-icons">d</span>
-          </span>
-
-        </label>
-        <label class="game-board__square">
-
-          <input type="checkbox">
-          <span class="game-board__cover">
-            <span class="game-icons">e</span>
-          </span>
-
-        </label>
-        <label class="game-board__square">
-
-          <input type="checkbox">
-          <span class="game-board__cover">
-            <span class="game-icons">f</span>
-          </span>
-
-        </label>
-        <label class="game-board__square">
-
-          <input type="checkbox">
-          <span class="game-board__cover">
-            <span class="game-icons">g</span>
-          </span>
-
-        </label>
-        <label class="game-board__square">
-
-          <input type="checkbox">
-          <span class="game-board__cover">
-            <span class="game-icons">h</span>
-          </span>
-
-        </label>
-        <label class="game-board__square">
-
-          <input type="checkbox">
-          <span class="game-board__cover">
-            <span class="game-icons">i</span>
-          </span>
-
-        </label>
-        <label class="game-board__square">
-
-          <input type="checkbox">
-          <span class="game-board__cover">
-            <span class="game-icons">a</span>
-          </span>
-
-        </label>
-        <label class="game-board__square">
-
-          <input type="checkbox">
-          <span class="game-board__cover">
-            <span class="game-icons">b</span>
-          </span>
-
-        </label>
-        <label class="game-board__square">
-
-          <input type="checkbox">
-          <span class="game-board__cover">
-            <span class="game-icons">c</span>
-          </span>
-
-        </label>
-        <label class="game-board__square">
-
-          <input type="checkbox">
-          <span class="game-board__cover">
-            <span class="game-icons">d</span>
-          </span>
-
-        </label>
-        <label class="game-board__square">
-
-          <input type="checkbox">
-          <span class="game-board__cover">
-            <span class="game-icons">e</span>
-          </span>
-
-        </label>
-        <label class="game-board__square">
-
-          <input type="checkbox">
-          <span class="game-board__cover">
-            <span class="game-icons">f</span>
-          </span>
-
-        </label>
-        <label class="game-board__square">
-
-          <input type="checkbox">
-          <span class="game-board__cover">
-            <span class="game-icons">g</span>
-          </span>
-
-        </label>
-        <label class="game-board__square">
-
-          <input type="checkbox">
-          <span class="game-board__cover">
-            <span class="game-icons">h</span>
-          </span>
-
-        </label>
-        <label class="game-board__square">
-
-          <input type="checkbox">
-          <span class="game-board__cover">
-            <span class="game-icons">i</span>
-          </span>
-
-        </label>
-
-      </div>
+      </script>
 
     </div>
 
