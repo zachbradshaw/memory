@@ -1,0 +1,56 @@
+@font-face {
+  font-family: 'Orbitron';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Orbitron-Light'), local('Orbitron-Regular'), url(http://fonts.gstatic.com/s/orbitron/v6/HmnHiRzvcnQr8CjBje6GQnYhjbSpvc47ee6xR_80Hnw.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+
+body {
+  background: black;
+  margin: 0;
+  padding: 0;
+}
+
+.loser-container {
+  width: 100%;
+}
+
+h1, h3 {
+  font-family: 'Orbitron';
+  color: white;
+  text-align: center;
+  margin: 75px 0;
+}
+
+.game-over {
+  font-size: 9em;
+}
+
+.next-time {
+  font-size: 4em;
+}
+
+.new-game {
+  font-size: 3em;
+}
+
+.link-background {
+  width: 30%;
+  border: 3px solid white;
+  margin: auto;
+  margin-bottom: 2em;
+}
+
+span {
+  font-family: 'memory-game-icons';
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+.link-background:hover {
+  background: #686868;
+}
