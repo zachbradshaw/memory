@@ -79,10 +79,6 @@ body {
   color: white;
 }
 
-/*.game-icons {
-  opacity: 0;
-}*/
-
 .game-logo-container {
   padding: 2.5em;
 }
@@ -150,7 +146,12 @@ body {
   z-index: 100;
 }
 
-.game-board__cover {
+.front {
+  backface-visibility: hidden;
+}
+
+.back {
+  backface-visibility: hidden;
   position: absolute;
   background: #7986CB;
   display: block;
@@ -166,22 +167,22 @@ body {
   }
 }
 
-.checkbox {
-  opacity: 0;
-}
-
-input:checked + .game-board__cover {
-  -webkit-animation: card-flip .3s 0 1 reverse;
-}
-
-input:checked + .game-board__cover > .game-icons {
-  -webkit-animation: show 1s 0 1 normal;
-}
-
-input:not(:checked) + .game-board__cover {
-  -webkit-animation: card-flip-back .3s 0 1 reverse;
-}
-
-input:not(:checked) + .game-board__cover .game-icons {
-  -webkit-animation: hide 2s 0 infinite normal;
-}
+// .checkbox {
+//   opacity: 0;
+// }
+//
+// input:checked + .game-board__cover {
+//   -webkit-animation: card-flip .3s 0 1 reverse;
+// }
+//
+// input:checked + .game-board__cover > .game-icons {
+//   -webkit-animation: show 1s 0 1 normal;
+// }
+//
+// input:not(:checked) + .game-board__cover {
+//   -webkit-animation: card-flip-back .3s 0 1 reverse;
+// }
+//
+// input:not(:checked) + .game-board__cover .game-icons {
+//   -webkit-animation: hide 2s 0 infinite normal;
+// }

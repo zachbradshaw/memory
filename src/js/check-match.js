@@ -1,31 +1,27 @@
 app.checkMatch = function () {
   var firstTile;
   var secondTile;
-  var firstCheckbox;
-  var secondCheckbox;
+  var icons = $('.game-icons').hide();
+  var firstIcon;
+  var secondIcon;
 
-  $('.game-board__cover').on('click', function (e) {
-    e.stopPropagation();
+  $('.back').on('click', function (e) {
     if (firstTile === undefined) {
       firstTile = $(this).data('id');
-      firstCheckbox = $('.checkbox', firstTile);
-      console.log(firstCheckbox);
+      firstIcon = $(this).children();
+      $(firstIcon).show();
       console.log('first tile value is ' + firstTile);
     } else if (firstTile !== undefined) {
         secondTile = $(this).data('id');
-        secondCheckbox = $('.checkbox', secondTile);
-        console.log(secondCheckbox);
+        secondIcon = $(this).children();
+        $(secondIcon).show();
         console.log('second tile value is ' + secondTile);
         if (firstTile === secondTile) {
-          alert('match');
-          $(firstCheckbox).attr('disabled', true);
-          $(secondCheckbox).attr('disabled', true);
           firstTile = undefined;
           secondTile = undefined;
         } else {
-          $(firstCheckbox).attr('checked', false);
-          $(secondCheckbox).attr('checked', false);
-          console.log('no match');
+          $(firstIcon).delay(500).fadeOut();
+          $(secondIcon).delay(500).fadeOut();
           firstTile = undefined;
           secondTile = undefined;
         }

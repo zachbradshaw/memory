@@ -41,12 +41,13 @@
 
         <div class="game-board">
           <% m.cards.forEach(function (card) { %>
-            <label class="game-board__square">
-              <input type="checkbox" class="checkbox">
-              <div class="game-board__cover" data-id="<%- card %>">
+            <div class="game-board__square">
+              <!-- <input type="checkbox" class="checkbox"> -->
+              <div class="front"></div>
+              <div class="back" data-id="<%- card %>">
                 <span class="game-icons"><%- card %></span>
               </div>
-            </label>
+            </div>
           <% }) %>
         </div>
 
