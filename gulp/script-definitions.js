@@ -9,6 +9,7 @@ module.exports = {
 
   vendor: [
     'bower_components/jquery/dist/jquery.min.js',
+    'bower_components/flip/dist/jquery.flip.js',
     'bower_components/lodash/lodash.min.js',
     'bower_componenets/rlite/rlite.min.js'
   ]

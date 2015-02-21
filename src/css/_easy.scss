@@ -161,9 +161,12 @@ body {
   text-align: center;
   padding: 40% 40%;
   border-radius: .1em;
+  &:hover {
+    cursor: pointer;
+  }
 }
 
-input {
+.checkbox {
   opacity: 0;
 }
 

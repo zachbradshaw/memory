@@ -1,1 +1,2 @@
-app.tileTemplate(9);
+app.gameTemplate(9);
+app.checkMatch();
