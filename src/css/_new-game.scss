@@ -10,41 +10,51 @@ span {
   font-family: "memory-game-icons";
 }
 
-.new-game__container {
-  width: 90%;
-}
+.new-game__page {
+  background-color: #3A3A3A;
 
-.new-game-logo {
-  // width: 95%;
-  font-family: 'Orbitron';
-  color: white;
-  text-align: center;
-  margin: auto;
-}
+  .new-game__container {
+    width: 100%;
 
-.game-select {
-  font-family: 'Orbitron';
-  color: white;
-  margin: 10px auto;
-  text-align: center;
-  width: 30%;
-}
+    .new-game__logo {
+      font-family: 'Orbitron';
+      color: white;
+      text-align: center;
+      margin: 2em auto 1em auto;
+      font-size: 400%;
+    }
 
-.game-select__easy,
-.game-select__hard {
-  border: 5px solid white;
-  margin: 10px 0;
-}
+    .icons {
+      color: white;
+    }
 
-.game-select a {
-  color: white;
-  text-decoration: none;
-}
+    .new-game__select {
+      font-family: 'Orbitron';
+      color: white;
+      margin: auto;
+      text-align: center;
+      width: 30%;
 
-.game-select__easy:hover {
-  background: black;
-}
+      .game-select__easy,
+      .game-select__hard {
+        border: 3px solid white;
+        border-radius: .25em;
+        margin: 10px 0;
+        padding: 1em;
+      }
 
-.game-select__hard:hover {
-  background: black;
+      .game-select a {
+        color: white;
+        text-decoration: none;
+      }
+
+      .game-select__easy:hover {
+        background: black;
+      }
+
+      .game-select__hard:hover {
+        background: black;
+      }
+    }
+  }
 }

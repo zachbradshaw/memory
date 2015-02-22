@@ -1,1 +1,1 @@
-// app.router = Rlite();
+app.router = Rlite();
