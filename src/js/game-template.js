@@ -5,4 +5,5 @@ app.gameTemplate = function (numPairs) {
   });
 
   $('.main-content').html(html);
+  $('.game-icons').hide();
 };

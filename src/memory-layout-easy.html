@@ -26,7 +26,7 @@
 
       <div class="game-details">
         <p class="game-details__lives">
-          <span class="icons">aaaaaaaaaaaaaaa</span>
+          <span class="lives-remaining icons">aaaaaaaaaaaaaaa</span>
         </p>
 
         <p class="game-details__timer">
@@ -42,7 +42,6 @@
         <div class="game-board">
           <% m.cards.forEach(function (card) { %>
             <div class="game-board__square">
-              <!-- <input type="checkbox" class="checkbox"> -->
               <div class="front"></div>
               <div class="back" data-id="<%- card %>">
                 <span class="game-icons"><%- card %></span>

@@ -1,11 +1,10 @@
 app.checkMatch = function () {
   var firstTile;
   var secondTile;
-  var icons = $('.game-icons').hide();
   var firstIcon;
   var secondIcon;
 
-  $('.back').on('click', function (e) {
+  $('.back').on('click', function () {
     if (firstTile === undefined) {
       firstTile = $(this).data('id');
       firstIcon = $(this).children();
@@ -22,6 +21,7 @@ app.checkMatch = function () {
         } else {
           $(firstIcon).delay(500).fadeOut();
           $(secondIcon).delay(500).fadeOut();
+          app.decrementLives();
           firstTile = undefined;
           secondTile = undefined;
         }
