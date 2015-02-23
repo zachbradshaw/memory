@@ -1,4 +1,4 @@
-/*Header font*/
+// Header font
 
 @font-face {
   font-family: 'Orbitron';
@@ -8,26 +8,26 @@
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
 }
 
-/*Tile flip animation parameters*/
-// @-webkit-keyframes card-flip {
-//   0% {
-//     transform: rotateY(0deg);
-//   }
-//
-//   100% {
-//     transform: rotateY(180deg);
-//   }
-// }
-//
-// @-webkit-keyframes card-flip-back {
-//   0% {
-//     transform: rotateY(180deg);
-//   }
-//
-//   100% {
-//     transform: rotateY(0deg);
-//   }
-// }
+// Tile flip animation parameters
+@-webkit-keyframes card-flip {
+  0% {
+    transform: rotateY(0deg);
+  }
+
+  100% {
+    transform: rotateY(180deg);
+  }
+}
+
+@-webkit-keyframes card-flip-back {
+  0% {
+    transform: rotateY(180deg);
+  }
+
+  100% {
+    transform: rotateY(0deg);
+  }
+}
 
 .easy-game__page {
   background: #3F51B5;
@@ -142,6 +142,8 @@
 
 .win-modal,
 .lose-modal {
+  font-family: 'Orbitron';
+  font-weight: 600;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -163,11 +165,11 @@
     }
   }
 }
-//
-// .flip .game-board__square {
-//   -webkit-animation: card-flip .3s 0 1 reverse;
-// }
-//
-// .flip-back .game-board__square {
-//   -webkit-animation: card-flip-back .3s 0 1 reverse;
-// }
+
+.flip {
+  -webkit-animation: card-flip .3s 0 1 reverse;
+}
+
+.flip-back {
+  -webkit-animation: card-flip-back .3s 0 1 reverse;
+}

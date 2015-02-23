@@ -1,26 +1,28 @@
 app.checkMatch = function () {
-  var firstTile;
-  var secondTile;
-  var firstIcon;
-  var secondIcon;
-  var matches = 0;
+  var firstTile,
+      secondTile,
+      firstId,
+      secondId,
+      firstIcon,
+      secondIcon,
+      matches = 0;
 
   $('.back').on('click', function () {
-    if (firstTile === undefined) {
-      firstTile = $(this).data('id');
+    if (firstId === undefined) {
+      firstTile = $(this);
+      firstId = $(this).data('id');
       firstIcon = $(this).children();
       $(firstIcon).fadeIn();
-      console.log('first tile value is ' + firstTile);
-    } else if (firstTile !== undefined) {
-        secondTile = $(this).data('id');
+    } else if (firstId !== undefined) {
+        secondTile = $(this);
+        secondId = $(this).data('id');
         secondIcon = $(this).children();
         $(secondIcon).fadeIn();
-        console.log('second tile value is ' + secondTile);
-        if (firstTile === secondTile) {
-          matches = matches + 1;
+        if (firstId === secondId) {
+          matches = ++matches;
           console.log(matches);
-          firstTile = undefined;
-          secondTile = undefined;
+          firstId = undefined;
+          secondId = undefined;
           if (matches === 9) {
             $('.win-modal').fadeIn();
           }
@@ -28,8 +30,8 @@ app.checkMatch = function () {
           $(firstIcon).delay(900).fadeOut();
           $(secondIcon).delay(500).fadeOut();
           app.decrementLives();
-          firstTile = undefined;
-          secondTile = undefined;
+          firstId = undefined;
+          secondId = undefined;
         }
       }
   });
