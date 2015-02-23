@@ -1,5 +1,5 @@
-app.gameTemplate = function (numPairs) {
-  var template = _.template($('#gameBoard').html(), {variable: 'm'});
+app.gameTemplate = function (numPairs, mode) {
+  var template = _.template($(mode).html(), {variable: 'm'});
   var html = template({
     cards: app.gameDeck(numPairs)
   });

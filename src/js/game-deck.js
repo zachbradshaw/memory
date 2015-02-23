@@ -1,4 +1,4 @@
-app.gameDeck = function (numPairs) {
+app.gameDeck = function (numPairs, mode) {
   var cards = 'abcdefghijklmnop'.split('').slice(0, numPairs);
 
   cards = cards.concat(cards);
