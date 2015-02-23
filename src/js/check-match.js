@@ -3,6 +3,7 @@ app.checkMatch = function () {
   var secondTile;
   var firstIcon;
   var secondIcon;
+  var matches = 0;
 
   $('.back').on('click', function () {
     if (firstTile === undefined) {
@@ -16,8 +17,13 @@ app.checkMatch = function () {
         $(secondIcon).fadeIn();
         console.log('second tile value is ' + secondTile);
         if (firstTile === secondTile) {
+          matches = matches + 1;
+          console.log(matches);
           firstTile = undefined;
           secondTile = undefined;
+          if (matches === 9) {
+            $('.win-modal').fadeIn();
+          }
         } else {
           $(firstIcon).delay(900).fadeOut();
           $(secondIcon).delay(500).fadeOut();

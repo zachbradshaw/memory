@@ -6,4 +6,6 @@ app.gameTemplate = function (numPairs, mode) {
 
   $('.main-content').html(html);
   $('.game-icons').hide();
+  $('.win-modal').hide();
+  $('.lose-modal').hide();
 };

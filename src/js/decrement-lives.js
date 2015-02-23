@@ -5,7 +5,7 @@ app.decrementLives = function () {
   var newLives = livesArr.join('');
   $('.lives-remaining').text(newLives);
 
-  if (lives === '') {
-    alert('GAME OVER');
+  if (lives.length === 1) {
+    $('.lose-modal').fadeIn();
   }
 };

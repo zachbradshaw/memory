@@ -139,6 +139,30 @@
     }
   }
 }
+
+.win-modal,
+.lose-modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 20em;
+  text-align: center;
+  padding: 3em;
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid black;
+  border-radius: .25em;
+  font-size: 2em;
+  line-height: 1.4em;
+  z-index: 1000;
+
+  .modal-link {
+    color: #3F51B5;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
 //
 // .flip .game-board__square {
 //   -webkit-animation: card-flip .3s 0 1 reverse;
