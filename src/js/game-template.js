@@ -8,4 +8,5 @@ app.gameTemplate = function (numPairs, mode) {
   $('.game-icons').hide();
   $('.win-modal').hide();
   $('.lose-modal').hide();
+  $('.alert-modal').hide();
 };

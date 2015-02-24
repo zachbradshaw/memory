@@ -141,7 +141,8 @@
 }
 
 .win-modal,
-.lose-modal {
+.lose-modal,
+.alert-modal {
   font-family: 'Orbitron';
   font-weight: 600;
   position: absolute;
@@ -172,4 +173,8 @@
 
 .flip-back {
   -webkit-animation: card-flip-back .3s 0 1 reverse;
+}
+
+.clicked {
+
 }

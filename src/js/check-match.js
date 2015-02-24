@@ -1,28 +1,25 @@
 app.checkMatch = function () {
   var firstTile,
-      secondTile,
-      firstId,
-      secondId,
       firstIcon,
       secondIcon,
       matches = 0;
 
   $('.back').on('click', function () {
-    if (firstId === undefined) {
-      firstTile = $(this);
-      firstId = $(this).data('id');
-      firstIcon = $(this).children();
+    var currentTile = $(this);
+    if (firstTile === undefined) {
+      firstTile = currentTile
+      firstIcon = currentTile.children();
       $(firstIcon).fadeIn();
-    } else if (firstId !== undefined) {
-        secondTile = $(this);
-        secondId = $(this).data('id');
+    } else if (firstTile[0] === currentTile[0]) {
+      $('.alert-modal').fadeIn().delay(1000).fadeOut();
+    } else {
         secondIcon = $(this).children();
         $(secondIcon).fadeIn();
-        if (firstId === secondId) {
+        if (firstTile.text() === currentTile.text()) {
           matches = ++matches;
           console.log(matches);
-          firstId = undefined;
-          secondId = undefined;
+          firstTile = undefined;
+          secondTile = undefined;
           if (matches === 9) {
             $('.win-modal').fadeIn();
           }
@@ -30,8 +27,8 @@ app.checkMatch = function () {
           $(firstIcon).delay(900).fadeOut();
           $(secondIcon).delay(500).fadeOut();
           app.decrementLives();
-          firstId = undefined;
-          secondId = undefined;
+          firstTile = undefined;
+          secondTile = undefined;
         }
       }
   });
