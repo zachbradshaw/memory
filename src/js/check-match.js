@@ -17,7 +17,6 @@ app.checkMatch = function () {
         $(secondIcon).fadeIn();
         if (firstTile.text() === currentTile.text()) {
           matches = ++matches;
-          console.log(matches);
           firstTile = undefined;
           secondTile = undefined;
           if (matches === 9) {
