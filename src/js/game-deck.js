@@ -1,6 +1,5 @@
 app.gameDeck = function (numPairs, mode) {
   var cards = 'abcdefghijklmnop'.split('').slice(0, numPairs);
-
   cards = cards.concat(cards);
 
   function swap(arr, x, y) {
@@ -14,9 +13,7 @@ app.gameDeck = function (numPairs, mode) {
       var randomIndex = Math.floor(Math.random() * arr.length);
       swap(arr, i, randomIndex);
     }
-
     return arr;
   }
-
   return shuffle(cards);
 };

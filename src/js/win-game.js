@@ -1,3 +1,1 @@
-app.router.add('winner', function () {
-
-});
+app.router.add('winner', function () {});

@@ -1,3 +1,1 @@
-app.router.add('loser', function () {
-
-});
+app.router.add('loser', function () {});
